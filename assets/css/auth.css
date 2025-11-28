@@ -45,6 +45,7 @@ body {
     border: none;
     outline: none;
     font-size: 18px;
+    width: 100%;
 }
 
 .btnShow {
@@ -152,14 +153,4 @@ body {
 /* Mặt sau (Sign Up) - Quay 180 độ ngay từ đầu */
 .back {
     transform: rotateY(180deg);
-}
-
-/* Điều chỉnh lại .content để phù hợp với .flip-container */
-.content {
-    /* Các thuộc tính position, top, left, transform, width, height giữ nguyên */
-    /* Nhưng bỏ display: flex, align-items, justify-content, padding ở đây 
-       và chuyển nó vào .front và .back */
-    /* Nếu bạn muốn giữ lại flexbox cho mặt trước/sau: */
-    /* width: 800px;
-    height: 600px; */
 }
