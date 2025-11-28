@@ -11,12 +11,108 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../../assets/css/base.css" />
-    <!-- <link rel="stylesheet" href="../../assets/css/header.css" /> -->
-    <script src="../../components/app-header.js" defer></script>
+    <link rel="stylesheet" href="../../assets/css/home.css" />
+    <script
+      src="../../components/Header/app-header.js"
+      defer
+      type="module"
+    ></script>
 
     <title>Home</title>
   </head>
   <body>
     <app-header></app-header>
+
+    <div class="main-container">
+      <aside class="sidebar">
+        <div class="user-profile">
+          <div class="avatar"></div>
+          <p class="user-name">Tên Người Dùng</p>
+          <p class="user-email">email@example.com</p>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a href="#" class="nav-item active" data-target="dashboard-content">
+            <i class="fa-solid fa-gauge-high"></i>
+            <span>Dashboard</span>
+          </a>
+          <a href="#" class="nav-item" data-target="vital-task-content">
+            <i class="fa-solid fa-flag"></i>
+            <span>Vital Task</span>
+          </a>
+          <a href="#" class="nav-item" data-target="my-task-content">
+            <i class="fa-solid fa-list-check"></i>
+            <span>My Task</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fa-solid fa-tasks"></i>
+            <span>Task Categories</span>
+          </a>
+          <a href="#" class="nav-item" data-target="info-account">
+            <i class="fa-solid fa-circle-user"></i>
+            <span>Account</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Help</span>
+          </a>
+        </nav>
+
+        <div class="logout">
+          <a href="#">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="content-header">
+          <h2>Nội dung chính</h2>
+        </header>
+
+        <section id="dashboard-content" class="content-area active-content">
+          <div class="card">
+            <h3>Đây là nơi hiển thị nội dung chi tiết</h3>
+            <p>
+              Chào mừng bạn đến với khu vực nội dung chính. Bạn có thể đặt các
+              biểu đồ, bảng biểu hoặc form tại đây.
+            </p>
+          </div>
+        </section>
+
+        <section id="vital-task-content" class="content-area">
+          <div class="card">
+            <h3>vital-task-content</h3>
+            <p>
+              Chào mừng bạn đến với khu vực nội dung chính. Bạn có thể đặt các
+              biểu đồ, bảng biểu hoặc form tại đây.
+            </p>
+          </div>
+        </section>
+
+        <section id="my-task-content" class="content-area">
+          <div class="card">
+            <h3>Đây là nơi hiển thị nội dung chi tiết</h3>
+            <p>
+              Chào mừng bạn đến với khu vực nội dung chính. Bạn có thể đặt các
+              biểu đồ, bảng biểu hoặc form tại đây.
+            </p>
+          </div>
+        </section>
+
+        <section id="info-account" class="content-area">
+          <div class="card">
+            <h3>Account</h3>
+            <p>
+              Chào mừng bạn đến với khu vực nội dung chính. Bạn có thể đặt các
+              biểu đồ, bảng biểu hoặc form tại đây.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../../assets/js/main.js"></script>
   </body>
 </html>

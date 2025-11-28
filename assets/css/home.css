@@ -1,0 +1,160 @@
+/* Thiết lập cơ bản */
+:root {
+    --sidebar-width: 280px;
+    /* Chiều rộng thanh Sidebar */
+    --background-color: #f4f4f7;
+    /* Màu nền khu vực nội dung */
+    --header-height: 80px;
+    /* Chiều cao Header */
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+/* 1. Cấu trúc chính */
+.main-container {
+    display: flex;
+    /* Dùng Flexbox để chia 2 cột */
+    min-height: 100vh;
+    /* Chiếm toàn bộ chiều cao màn hình */
+}
+
+/* 2. Thanh Sidebar bên trái */
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 20px 0;
+    position: fixed;
+    top: var(--header-height);
+    /* Bắt đầu ngay dưới Header */
+    left: 0;
+    /* Chiếm hết chiều cao còn lại của viewport */
+    height: calc(100vh - var(--header-height));
+    /* Thiết lập Flexbox cột để đẩy Logout xuống dưới */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    margin-top: var(--header-height);
+    width: calc(100% - var(--sidebar-width));
+    height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+    padding: 30px;
+}
+
+/* Thông tin người dùng */
+.user-profile {
+    text-align: center;
+    padding: 0 20px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    background-color: var(--white);
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    border: 3px solid var(--white);
+    /* Thay bằng ảnh đại diện thật nếu có */
+}
+
+.user-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.user-email {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Điều hướng Sidebar */
+.sidebar-nav {
+    flex-grow: 1;
+    /* Cho phép nav chiếm hết không gian giữa profile và logout */
+    padding: 20px 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: var(--white);
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    font-size: 16px;
+}
+
+.nav-item i {
+    width: 30px;
+    text-align: center;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: var(--white);
+    color: var(--primary);
+    /* Tạo vệt đỏ nhạt như trong mẫu */
+}
+
+/* Nút Logout */
+.logout a {
+    display: block;
+    padding: 15px 20px;
+    text-align: left;
+    color: var(--white);
+    text-decoration: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.2s ease;
+}
+
+.logout a i {
+    margin-right: 10px;
+}
+
+.logout a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* 3. Khu vực nội dung chính */
+.main-content {
+    /* Tạo khoảng trống bên trái bằng với chiều rộng Sidebar cố định */
+    margin-left: var(--sidebar-width);
+    flex-grow: 1;
+    /* Cho phép nội dung chiếm hết phần còn lại */
+    padding: 30px;
+}
+
+.content-header {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-area {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Chỉ hiển thị khu vực có class active-content */
+.content-area.active-content {
+    display: block;
+    opacity: 1;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
