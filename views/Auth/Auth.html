@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/auth.css" />
+    <title>Log In</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content flip-container">
+        <div class="flipper">
+          <div class="front">
+            <div>
+              <div id="form">
+                <h3>Log In</h3>
+                <div class="box">
+                  <i class="fa-regular fa-user"></i>
+                  <input
+                    type="text"
+                    id="email"
+                    placeholder="Enter your email..."
+                  />
+                </div>
+                <div class="box">
+                  <i class="fa-solid fa-lock"></i>
+                  <input type="password" id="password" placeholder="******" />
+                </div>
+                <button class="btnLogin">Login</button>
+              </div>
+              <p class="desc">
+                Don't have an account?
+                <a id="toggle-signup" href="#">Create One</a>
+              </p>
+            </div>
+            <div class="imgLogin">
+              <img src="../../assets/images/login.png" alt="" />
+            </div>
+          </div>
+
+          <div class="back">
+            <div class="imgLogin">
+              <img src="../../assets/images/signup.png" alt="" />
+            </div>
+            <div>
+              <div id="form-signup">
+                <h3>Sign Up</h3>
+                <div class="box">
+                  <i class="fa-solid fa-user-pen"></i>
+                  <input
+                    type="text"
+                    id="firstName"
+                    class="inp"
+                    placeholder="Enter First Name..."
+                  />
+                </div>
+                <div class="box">
+                  <i class="fa-solid fa-user-pen"></i>
+                  <input
+                    type="text"
+                    id="lastName"
+                    class="inp"
+                    placeholder="Enter Last Name..."
+                  />
+                </div>
+                <div class="box">
+                  <i class="fa-solid fa-user"></i>
+                  <input
+                    type="text"
+                    id="username"
+                    class="inp"
+                    placeholder="Enter Username..."
+                  />
+                </div>
+                <div class="box">
+                  <i class="fa-solid fa-envelope"></i>
+                  <input
+                    type="text"
+                    id="email"
+                    class="inp"
+                    placeholder="Enter Email..."
+                  />
+                </div>
+                <div class="box">
+                  <i class="fa-solid fa-lock"></i>
+                  <input
+                    type="text"
+                    id="password"
+                    class="inp"
+                    placeholder="Enter Password..."
+                  />
+                </div>
+                <div class="box">
+                  <i class="fa-solid fa-lock"></i>
+                  <input
+                    type="text"
+                    id="confirmPassword"
+                    class="inp"
+                    placeholder="Confirm Password..."
+                  />
+                </div>
+                <button class="btnLogin">Register</button>
+              </div>
+              <p class="desc">
+                Already have an account?
+                <a id="toggle-login" href="#">Log In</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>
