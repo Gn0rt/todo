@@ -36,3 +36,20 @@ body {
 .content p {
     color: var(--color-text);
 }
+
+#btnLogin,
+#btnSignup {
+    text-decoration: none;
+    background-color: var(--primary);
+    padding: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    color: var(--white);
+    border-radius: 5px;
+    transition: all ease .2s;
+}
+
+#btnLogin:hover,
+#btnSignup:hover {
+    background-color: var(--light-primary);
+}
