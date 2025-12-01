@@ -37,10 +37,6 @@
             <i class="fa-solid fa-gauge-high"></i>
             <span>Dashboard</span>
           </a>
-          <a href="#" class="nav-item" data-target="vital-task-content">
-            <i class="fa-solid fa-flag"></i>
-            <span>Vital Task</span>
-          </a>
           <a href="#" class="nav-item active" data-target="my-task-content">
             <i class="fa-solid fa-list-check"></i>
             <span>My Task</span>
@@ -82,36 +78,91 @@
           </div>
         </section>
 
-        <section id="vital-task-content" class="content-area">
-          <div class="card">
-            <h3>vital-task-content</h3>
-            <p>
-              Chào mừng bạn đến với khu vực nội dung chính. Bạn có thể đặt các
-              biểu đồ, bảng biểu hoặc form tại đây.
-            </p>
-          </div>
-        </section>
-
         <!-- My Task -->
         <section id="my-task-content" class="content-area active-content">
           <div class="task-content-wrapper">
             <div class="list-tasks">
-              <h4>My Tasks</h4>
+              <div class="header-lists">
+                <h4>My Tasks</h4>
+                <button class="btnAddTask">
+                  Add Task <i class="fa-solid fa-plus"></i>
+                </button>
+              </div>
               <ul class="lists">
                 <li class="task" data-task-id="1">
                   <h5>Task Title</h5>
-                  <p>Task desciption</p>
-                  <span>Priority <span>Extreme</span></span>
+                  <p class="task-desc">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Enim ipsam deleniti explicabo corporis, doloribus similique?
+                    Qui animi esse mollitia, assumenda optio distinctio et ipsam
+                    nostrum facilis, explicabo nemo. Ea, reiciendis ratione!
+                    Doloribus fugit aliquam officiis quibusdam aut beatae error,
+                    accusamus voluptatibus tempore suscipit incidunt eos
+                    repellat consequatur non atque nam temporibus adipisci ad
+                    ipsum fugiat? Debitis officiis necessitatibus soluta. Amet
+                    molestias blanditiis fugiat adipisci magnam illo provident
+                    deleniti aut repellat placeat delectus minima sed saepe,
+                    odit molestiae reiciendis quos laudantium voluptates! Fugit
+                    explicabo id, neque similique nihil quia ratione nisi labore
+                    ipsam, magnam impedit mollitia in dolorem error quae
+                    incidunt.
+                  </p>
+                  <span class="task-priority"
+                    >Priority: <span>Extreme</span></span
+                  >
+                  <span class="task-status"
+                    >Status: <span>Incomplete</span></span
+                  >
                 </li>
                 <li class="task" data-task-id="2">
                   <h5>Task Title</h5>
-                  <p>Task desciption</p>
-                  <span>Priority <span>Extreme</span></span>
+                  <p class="task-desc">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Enim ipsam deleniti explicabo corporis, doloribus similique?
+                    Qui animi esse mollitia, assumenda optio distinctio et ipsam
+                    nostrum facilis, explicabo nemo. Ea, reiciendis ratione!
+                    Doloribus fugit aliquam officiis quibusdam aut beatae error,
+                    accusamus voluptatibus tempore suscipit incidunt eos
+                    repellat consequatur non atque nam temporibus adipisci ad
+                    ipsum fugiat? Debitis officiis necessitatibus soluta. Amet
+                    molestias blanditiis fugiat adipisci magnam illo provident
+                    deleniti aut repellat placeat delectus minima sed saepe,
+                    odit molestiae reiciendis quos laudantium voluptates! Fugit
+                    explicabo id, neque similique nihil quia ratione nisi labore
+                    ipsam, magnam impedit mollitia in dolorem error quae
+                    incidunt.
+                  </p>
+                  <span class="task-priority"
+                    >Priority: <span>Extreme</span></span
+                  >
+                  <span class="task-status"
+                    >Status: <span>Incomplete</span></span
+                  >
                 </li>
                 <li class="task" data-task-id="3">
                   <h5>Task Title</h5>
-                  <p>Task desciption</p>
-                  <span>Priority <span>Extreme</span></span>
+                  <p class="task-desc">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Enim ipsam deleniti explicabo corporis, doloribus similique?
+                    Qui animi esse mollitia, assumenda optio distinctio et ipsam
+                    nostrum facilis, explicabo nemo. Ea, reiciendis ratione!
+                    Doloribus fugit aliquam officiis quibusdam aut beatae error,
+                    accusamus voluptatibus tempore suscipit incidunt eos
+                    repellat consequatur non atque nam temporibus adipisci ad
+                    ipsum fugiat? Debitis officiis necessitatibus soluta. Amet
+                    molestias blanditiis fugiat adipisci magnam illo provident
+                    deleniti aut repellat placeat delectus minima sed saepe,
+                    odit molestiae reiciendis quos laudantium voluptates! Fugit
+                    explicabo id, neque similique nihil quia ratione nisi labore
+                    ipsam, magnam impedit mollitia in dolorem error quae
+                    incidunt.
+                  </p>
+                  <span class="task-priority"
+                    >Priority: <span>Extreme</span></span
+                  >
+                  <span class="task-status"
+                    >Status: <span>Incomplete</span></span
+                  >
                 </li>
               </ul>
             </div>
@@ -119,13 +170,33 @@
               <div class="detail-card">
                 <h3>Submit Documents</h3>
                 <p class="priority">Priority: <span>Extreme</span></p>
-                <p>
-                  <strong>Objective:</strong> To submit required documents...
-                </p>
-                <p>
-                  <strong>Description:</strong> Review the list of documents
-                  required for submission...
-                </p>
+                <p>Created on: 1/12/2025</p>
+                <div>
+                  <div><strong>Task Title</strong>: Document Submission</div>
+
+                  <div>
+                    <strong>Objective:</strong> Review the list of documents
+                    required for submission...
+                  </div>
+
+                  <div>
+                    <strong>Description:</strong> Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit. Quod dolor saepe dolorum,
+                    distinctio fuga suscipit adipisci quam. Optio magnam
+                    voluptatibus debitis doloribus ducimus ullam beatae quisquam
+                    natus recusandae neque sit id perspiciatis, aspernatur ut
+                    voluptas adipisci? Nam iste deserunt nihil numquam,
+                    eligendi, ullam eos adipisci, optio ipsa officia sed quasi
+                    praesentium? Quia dolor explicabo impedit sunt nobis et
+                    dolores asperiores, suscipit ipsa eos praesentium, odio
+                    consequatur repudiandae consequuntur numquam accusantium quo
+                    itaque distinctio. Culpa excepturi cum molestiae vitae est
+                    quas, repellendus modi repellat deserunt eius. Sapiente
+                    suscipit repudiandae asperiores assumenda animi unde eos
+                    ratione praesentium, voluptate sequi quis dolorum
+                    reprehenderit.
+                  </div>
+                </div>
                 <div class="detail-actions">
                   <i class="fa-solid fa-trash-can"></i>
                   <i class="fa-solid fa-pen"></i>
@@ -145,8 +216,11 @@
           </div>
         </section>
       </main>
+
+      <div id="modal"></div>
     </div>
 
     <script src="../../assets/js/main.js"></script>
+    <script src="../../assets/js/mytask.js"></script>
   </body>
 </html>

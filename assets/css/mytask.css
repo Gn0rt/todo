@@ -40,8 +40,80 @@
     transition: flex-basis 0.3s ease-in-out, margin-left 0.3s ease-in-out;
 }
 
+.header-lists {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-lists h4 {
+    font-size: 24px;
+}
+
+.btnDeleteTask,
+.btnEditTask,
+.btnAddTask,
+.btnCompleteTask {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnDeleteTask:hover,
+.btnEditTask:hover,
+.btnAddTask:hover {
+    background-color: var(--light-primary);
+}
+
 .lists {
     list-style: none;
+    margin-top: 20px;
+}
+
+.task-desc {
+    color: var(--color-text);
+    margin: 10px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+}
+
+.priority span,
+.task-priority span {
+    color: red;
+    font-weight: 600;
+}
+
+.task-status,
+.task-status span,
+.task-priority span,
+.task-priority {
+    font-size: 13px;
+}
+
+.task-status {
+    margin-left: 10px;
+}
+
+.status span,
+.task-status span {
+    color: var(--warn);
+    font-weight: 600;
+}
+
+.created span {
+    color: var(--light-blue);
+}
+
+.created,
+.priority {
+    font-weight: 500;
 }
 
 /* --- TRẠNG THÁI ACTIVE (KHI CỘT THỨ 2 XUẤT HIỆN) --- */
@@ -49,14 +121,14 @@
 /* Thêm class này vào .task-content-wrapper khi một task được chọn */
 .task-content-wrapper.show-detail .list-tasks {
     /* Thu gọn List Tasks xuống 40% */
-    flex-basis: 40%;
+    flex-basis: 50%;
     margin-right: 20px;
     /* Thêm khoảng cách giữa 2 cột */
 }
 
 .task-content-wrapper.show-detail .details-task {
     /* Mở rộng Detail Task lên 60% */
-    flex-basis: 60%;
+    flex-basis: 50%;
     background-color: white;
     /* Đổi màu nền thành trắng khi hiển thị */
     padding: 20px;
@@ -78,6 +150,14 @@
     background-color: #f9f9f9;
 }
 
+.task h5 {
+    font-size: 20px;
+}
+
+.task-desc {
+    font-size: 15px;
+}
+
 .task.selected {
     border-left: 5px solid var(--primary);
     /* Đánh dấu Task đang được chọn */
@@ -87,4 +167,40 @@
 /* Style cho nội dung chi tiết */
 .detail-card {
     /* Style cho card chi tiết task bên trong details-task */
+}
+
+.detail-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.detail-card-desc {
+    margin: 10px 20px 20px 0;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.detail-card-desc span {
+    color: var(--color-text);
+}
+
+.btnDeleteTask {
+    background-color: var(--delete);
+}
+
+.btnCompleteTask {
+    background-color: var(--complete);
+}
+
+.btnCompleteTask:hover {
+    background-color: var(--light-complete);
+}
+
+.priority span,
+.status span,
+.created span,
+.priority,
+.status,
+.created {
+    font-size: 15px;
 }
