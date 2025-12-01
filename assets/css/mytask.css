@@ -1,0 +1,90 @@
+/* Thiết lập khu vực nội dung chính cho My Task */
+#my-task-content {
+    /* Đảm bảo nội dung này lấp đầy không gian cuộn */
+    height: 100%;
+}
+
+.task-content-wrapper {
+    display: flex;
+    height: 100%;
+    /* Đảm bảo nó chiếm đủ chiều cao của khu vực cuộn */
+    overflow: hidden;
+    /* Ngăn wrapper cuộn ngang khi thay đổi kích thước */
+}
+
+/* 1. Khu vực List Tasks (Master) */
+.list-tasks {
+    /* Mặc định List Tasks chiếm 100% chiều rộng */
+    flex-basis: 100%;
+    flex-shrink: 0;
+    /* Quan trọng: Ngăn nó bị co lại ngoài ý muốn */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Thiết lập transition cho hiệu ứng thu gọn mượt mà */
+    transition: flex-basis 0.3s ease-in-out, margin-right 0.3s ease-in-out;
+}
+
+/* 2. Khu vực Detail Task (Detail) */
+.details-task {
+    /* Ban đầu, Detail Task được ẩn */
+    flex-basis: 0;
+    flex-shrink: 0;
+    margin-left: 0;
+    overflow-y: auto;
+    /* Cho phép cuộn nội dung chi tiết */
+    background-color: var(--background-color);
+
+    /* Thiết lập transition cho hiệu ứng mở rộng mượt mà */
+    transition: flex-basis 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+}
+
+.lists {
+    list-style: none;
+}
+
+/* --- TRẠNG THÁI ACTIVE (KHI CỘT THỨ 2 XUẤT HIỆN) --- */
+
+/* Thêm class này vào .task-content-wrapper khi một task được chọn */
+.task-content-wrapper.show-detail .list-tasks {
+    /* Thu gọn List Tasks xuống 40% */
+    flex-basis: 40%;
+    margin-right: 20px;
+    /* Thêm khoảng cách giữa 2 cột */
+}
+
+.task-content-wrapper.show-detail .details-task {
+    /* Mở rộng Detail Task lên 60% */
+    flex-basis: 60%;
+    background-color: white;
+    /* Đổi màu nền thành trắng khi hiển thị */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style cho các Task Item */
+.task {
+    padding: 15px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.task:hover {
+    background-color: #f9f9f9;
+}
+
+.task.selected {
+    border-left: 5px solid var(--primary);
+    /* Đánh dấu Task đang được chọn */
+    background-color: #fefefe;
+}
+
+/* Style cho nội dung chi tiết */
+.detail-card {
+    /* Style cho card chi tiết task bên trong details-task */
+}

@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="../../assets/css/base.css" />
     <link rel="stylesheet" href="../../assets/css/home.css" />
+    <link rel="stylesheet" href="../../assets/css/mytask.css" />
     <script
       src="../../components/Header/app-header.js"
       defer
@@ -32,7 +33,7 @@
         </div>
 
         <nav class="sidebar-nav">
-          <a href="#" class="nav-item active" data-target="dashboard-content">
+          <a href="#" class="nav-item" data-target="dashboard-content">
             <i class="fa-solid fa-gauge-high"></i>
             <span>Dashboard</span>
           </a>
@@ -40,7 +41,7 @@
             <i class="fa-solid fa-flag"></i>
             <span>Vital Task</span>
           </a>
-          <a href="#" class="nav-item" data-target="my-task-content">
+          <a href="#" class="nav-item active" data-target="my-task-content">
             <i class="fa-solid fa-list-check"></i>
             <span>My Task</span>
           </a>
@@ -71,7 +72,7 @@
           <h2>Nội dung chính</h2>
         </header>
 
-        <section id="dashboard-content" class="content-area active-content">
+        <section id="dashboard-content" class="content-area">
           <div class="card">
             <h3>Đây là nơi hiển thị nội dung chi tiết</h3>
             <p>
@@ -91,13 +92,46 @@
           </div>
         </section>
 
-        <section id="my-task-content" class="content-area">
-          <div class="card">
-            <h3>Đây là nơi hiển thị nội dung chi tiết</h3>
-            <p>
-              Chào mừng bạn đến với khu vực nội dung chính. Bạn có thể đặt các
-              biểu đồ, bảng biểu hoặc form tại đây.
-            </p>
+        <!-- My Task -->
+        <section id="my-task-content" class="content-area active-content">
+          <div class="task-content-wrapper">
+            <div class="list-tasks">
+              <h4>My Tasks</h4>
+              <ul class="lists">
+                <li class="task" data-task-id="1">
+                  <h5>Task Title</h5>
+                  <p>Task desciption</p>
+                  <span>Priority <span>Extreme</span></span>
+                </li>
+                <li class="task" data-task-id="2">
+                  <h5>Task Title</h5>
+                  <p>Task desciption</p>
+                  <span>Priority <span>Extreme</span></span>
+                </li>
+                <li class="task" data-task-id="3">
+                  <h5>Task Title</h5>
+                  <p>Task desciption</p>
+                  <span>Priority <span>Extreme</span></span>
+                </li>
+              </ul>
+            </div>
+            <div class="details-task" id="task-detail-pane">
+              <div class="detail-card">
+                <h3>Submit Documents</h3>
+                <p class="priority">Priority: <span>Extreme</span></p>
+                <p>
+                  <strong>Objective:</strong> To submit required documents...
+                </p>
+                <p>
+                  <strong>Description:</strong> Review the list of documents
+                  required for submission...
+                </p>
+                <div class="detail-actions">
+                  <i class="fa-solid fa-trash-can"></i>
+                  <i class="fa-solid fa-pen"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
