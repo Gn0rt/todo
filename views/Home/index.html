@@ -217,10 +217,73 @@
         </section>
       </main>
 
-      <div id="modal"></div>
+      <div id="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div>
+            <h3 class="modal-title">Add New Task</h3>
+            <div class="form-content">
+              <form action="" id="form">
+                <div class="form-control">
+                  <label for="">Title</label>
+                  <input type="text" placeholder="Enter Title..." />
+                </div>
+                <div class="form-control">
+                  <label for="">Date</label>
+                  <input type="datetime-local" />
+                </div>
+                <div class="form-control">
+                  <label>Priority</label>
+                  <ul class="list-checks">
+                    <li>
+                      <input type="checkbox" /><span class="extreme"
+                        >Extreme</span
+                      >
+                    </li>
+                    <li>
+                      <input type="checkbox" /><span class="moderate"
+                        >Moderate</span
+                      >
+                    </li>
+                    <li>
+                      <input type="checkbox" /><span class="low">Low</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-control">
+                  <label for="">Task Description</label>
+                  <textarea name="" id=""></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
     </div>
 
     <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/mytask.js"></script>
+    <script>
+      const modal = document.getElementById("modal");
+      const btnAddTask = document.querySelector(".btnAddTask");
+      var span = document.getElementsByClassName("close")[0];
+
+      console.log(span);
+
+      btnAddTask.addEventListener("click", function () {
+        modal.style.display = "flex";
+      });
+
+      span.addEventListener("click", function () {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", function (e) {
+        if (e.target == modal) {
+          modal.style.display = "none";
+        }
+      });
+    </script>
   </body>
 </html>
