@@ -49,6 +49,8 @@
 
 .header-lists h4 {
     font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .btnInProgressTask,

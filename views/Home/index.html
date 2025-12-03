@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../../assets/css/home.css" />
     <link rel="stylesheet" href="../../assets/css/mytask.css" />
     <link rel="stylesheet" href="../../assets/css/dashboard.css" />
+    <link rel="stylesheet" href="../../assets/css/infoacc.css" />
     <script
       src="../../components/Header/app-header.js"
       defer
@@ -65,10 +66,6 @@
       </aside>
 
       <main class="main-content">
-        <header class="content-header">
-          <h2>Nội dung chính</h2>
-        </header>
-
         <!-- Dashboard -->
         <section id="dashboard-content" class="content-area active-content">
           <div class="dashboard-widget">
@@ -180,7 +177,7 @@
                       libero distinctio ab numquam! Dignissimos autem beatae
                       delectus. Commodi fuga vero rem provident. Quidem!
                     </p>
-                    <p class="notstarted-task-ago">Completed 2 days ago.</p>
+                    <p class="notstarted-task-ago">Not Started</p>
                     <p class="notstarted-task-created">Created at: 2/12/2025</p>
                   </div>
                 </li>
@@ -320,12 +317,52 @@
         </section>
 
         <section id="info-account" class="content-area">
-          <div class="card">
-            <h3>Account</h3>
-            <p>
-              Chào mừng bạn đến với khu vực nội dung chính. Bạn có thể đặt các
-              biểu đồ, bảng biểu hoặc form tại đây.
-            </p>
+          <div class="account-container">
+            <h3 class="account-title">Account Information</h3>
+            <div class="account-content">
+              <div>
+                <div class="account-avatar">
+                  <img src="../../assets/images/ct.jpg" alt="Avatars" />
+                  <div>
+                    <p class="account-name">My Name</p>
+                    <p class="account-email">example@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="account-information">
+                  <form action="" id="form-information">
+                    <div class="form-control">
+                      <label for="">First Name</label>
+                      <input type="text" placeholder="Enter Title..." />
+                    </div>
+                    <div class="form-control">
+                      <label for="">Last Name</label>
+                      <input type="text" placeholder="Enter Title..." />
+                    </div>
+                    <div class="form-control">
+                      <label for="">Email Address</label>
+                      <input type="text" placeholder="Enter Title..." />
+                    </div>
+                    <div class="form-control">
+                      <label for="">Password</label>
+                      <input type="text" placeholder="Enter Title..." />
+                    </div>
+                    <div class="form-control">
+                      <label for="">Contact Number</label>
+                      <input type="text" placeholder="Enter Title..." />
+                    </div>
+                    <div class="form-control">
+                      <label for="">Position</label>
+                      <input type="text" placeholder="Enter Title..." />
+                    </div>
+                    <button class="btnUpdateInfo btnForm">
+                      Update Info <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <div class="clear"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
@@ -378,6 +415,11 @@
                   <label for="">Task Description</label>
                   <textarea name="" id=""></textarea>
                 </div>
+
+                <button class="btnForm">
+                  Add Task <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="clear"></div>
               </form>
             </div>
           </div>

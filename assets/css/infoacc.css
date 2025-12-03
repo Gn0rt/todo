@@ -1,0 +1,68 @@
+.account-container {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.account-title {
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.account-avatar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.account-name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.account-email {
+    color: var(--color-text);
+    margin-top: 5px;
+}
+
+.account-content {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.account-avatar img {
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.account-information {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.btnForm {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary);
+    color: var(--white);
+    float: right;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnForm:hover {
+    background-color: var(--light-primary);
+}
+
+.clear {
+    clear: both;
+}
