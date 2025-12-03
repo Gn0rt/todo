@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="../../assets/css/base.css" />
     <link rel="stylesheet" href="../../assets/css/home.css" />
     <link rel="stylesheet" href="../../assets/css/mytask.css" />
+    <link rel="stylesheet" href="../../assets/css/dashboard.css" />
     <script
       src="../../components/Header/app-header.js"
       defer
       type="module"
     ></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <title>Home</title>
   </head>
   <body>
@@ -33,11 +34,11 @@
         </div>
 
         <nav class="sidebar-nav">
-          <a href="#" class="nav-item" data-target="dashboard-content">
+          <a href="#" class="nav-item active" data-target="dashboard-content">
             <i class="fa-solid fa-gauge-high"></i>
             <span>Dashboard</span>
           </a>
-          <a href="#" class="nav-item active" data-target="my-task-content">
+          <a href="#" class="nav-item" data-target="my-task-content">
             <i class="fa-solid fa-list-check"></i>
             <span>My Task</span>
           </a>
@@ -68,18 +69,130 @@
           <h2>Nội dung chính</h2>
         </header>
 
-        <section id="dashboard-content" class="content-area">
-          <div class="card">
-            <h3>Đây là nơi hiển thị nội dung chi tiết</h3>
-            <p>
-              Chào mừng bạn đến với khu vực nội dung chính. Bạn có thể đặt các
-              biểu đồ, bảng biểu hoặc form tại đây.
-            </p>
+        <!-- Dashboard -->
+        <section id="dashboard-content" class="content-area active-content">
+          <div class="dashboard-widget">
+            <h3 class="widget-title">
+              <span class="icon"><i class="fa-solid fa-chart-pie"></i></span>
+              Task Status
+            </h3>
+
+            <div class="chart-row">
+              <div class="chart-container">
+                <div id="chart1"></div>
+                <div class="chart-label">
+                  <span class="dot completed"></span> Completed
+                </div>
+              </div>
+
+              <div class="chart-container">
+                <div id="chart2"></div>
+                <div class="chart-label">
+                  <span class="dot in-progress"></span> In Progress
+                </div>
+              </div>
+
+              <div class="chart-container">
+                <div id="chart3"></div>
+                <div class="chart-label">
+                  <span class="dot not-started"></span> Not Started
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tasks-widget">
+            <div class="complete-tasks">
+              <h5>Task Completed</h5>
+              <ul class="list-dashboard-tasks">
+                <li class="complete-task-item">
+                  <div class="complete-task-content">
+                    <h4 class="complete-task-title">Task Title</h4>
+                    <p class="complete-task-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Unde magnam nostrum perferendis alias autem illo, nulla
+                      libero distinctio ab numquam! Dignissimos autem beatae
+                      delectus. Commodi fuga vero rem provident. Quidem!
+                    </p>
+                    <p class="complete-task-ago">Completed 2 days ago.</p>
+                    <p class="complete-task-created">Created at: 2/12/2025</p>
+                  </div>
+                </li>
+                <li class="complete-task-item">
+                  <div class="complete-task-content">
+                    <h4 class="complete-task-title">Task Title</h4>
+                    <p class="complete-task-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Unde magnam nostrum perferendis alias autem illo, nulla
+                      libero distinctio ab numquam! Dignissimos autem beatae
+                      delectus. Commodi fuga vero rem provident. Quidem!
+                    </p>
+                    <p class="complete-task-ago">Completed 2 days ago.</p>
+                    <p class="complete-task-created">Created at: 2/12/2025</p>
+                  </div>
+                </li>
+                <li class="complete-task-item">
+                  <div class="complete-task-content">
+                    <h4 class="complete-task-title">Task Title</h4>
+                    <p class="complete-task-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Unde magnam nostrum perferendis alias autem illo, nulla
+                      libero distinctio ab numquam! Dignissimos autem beatae
+                      delectus. Commodi fuga vero rem provident. Quidem!
+                    </p>
+                    <p class="complete-task-ago">Completed 2 days ago.</p>
+                    <p class="complete-task-created">Created at: 2/12/2025</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="inprogress-tasks">
+              <h5>Task In Progress</h5>
+              <ul class="list-dashboard-tasks">
+                <li class="inprogress-task-item">
+                  <div class="inprogress-task-content">
+                    <h4 class="inprogress-task-title">Task Title</h4>
+                    <p class="inprogress-task-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Unde magnam nostrum perferendis alias autem illo, nulla
+                      libero distinctio ab numquam! Dignissimos autem beatae
+                      delectus. Commodi fuga vero rem provident. Quidem!
+                    </p>
+                    <p class="inprogress-task-ago">In Progress</p>
+                    <p class="inprogress-task-created">Created at: 2/12/2025</p>
+                  </div>
+                </li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+
+            <div class="notstarted-tasks">
+              <h5>Task Not Started</h5>
+              <ul class="list-dashboard-tasks">
+                <li class="notstarted-task-item">
+                  <div class="notstarted-task-content">
+                    <h4 class="notstarted-task-title">Task Title</h4>
+                    <p class="notstarted-task-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Unde magnam nostrum perferendis alias autem illo, nulla
+                      libero distinctio ab numquam! Dignissimos autem beatae
+                      delectus. Commodi fuga vero rem provident. Quidem!
+                    </p>
+                    <p class="notstarted-task-ago">Completed 2 days ago.</p>
+                    <p class="notstarted-task-created">Created at: 2/12/2025</p>
+                  </div>
+                </li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
           </div>
         </section>
 
         <!-- My Task -->
-        <section id="my-task-content" class="content-area active-content">
+        <section id="my-task-content" class="content-area">
           <div class="task-content-wrapper">
             <div class="list-tasks">
               <div class="header-lists">
@@ -236,17 +349,28 @@
                   <label>Priority</label>
                   <ul class="list-checks">
                     <li>
-                      <input type="checkbox" /><span class="extreme"
-                        >Extreme</span
-                      >
+                      <input
+                        type="radio"
+                        name="status"
+                        id="extreme"
+                        value="extreme"
+                      /><label class="extreme" for="extreme">Extreme</label>
                     </li>
                     <li>
-                      <input type="checkbox" /><span class="moderate"
-                        >Moderate</span
-                      >
+                      <input
+                        type="radio"
+                        name="status"
+                        id="moderate"
+                        value="moderate"
+                      /><label class="moderate" for="moderate">Moderate</label>
                     </li>
                     <li>
-                      <input type="checkbox" /><span class="low">Low</span>
+                      <input
+                        type="radio"
+                        name="status"
+                        id="low"
+                        value="low"
+                      /><label class="low" for="low">Low</label>
                     </li>
                   </ul>
                 </div>
@@ -264,6 +388,7 @@
 
     <script src="../../assets/js/main.js"></script>
     <script src="../../assets/js/mytask.js"></script>
+    <script src="../../assets/js/chart.js"></script>
     <script>
       const modal = document.getElementById("modal");
       const btnAddTask = document.querySelector(".btnAddTask");

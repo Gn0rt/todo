@@ -1,0 +1,255 @@
+.dashboard-widget {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.widget-title {
+    font-size: 18px;
+    font-weight: 600;
+    /* color: var(--primary); */
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.widget-title .icon i {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 35px;
+    background-image: linear-gradient(to right,
+            #f2709c,
+            #ff9472,
+            #ccc);
+    -webkit-background-clip: text;
+    /* Cần prefix cho trình duyệt dựa trên Webkit (Chrome, Safari) */
+    background-clip: text;
+    color: transparent;
+    background-repeat: no-repeat;
+}
+
+.chart-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.chart-container {
+    flex-basis: 33.33%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* -------------------------------------- */
+.chart-label {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.dot.completed {
+    background-color: #00e396;
+}
+
+.dot.in-progress {
+    background-color: #0077ff;
+}
+
+.dot.not-started {
+    background-color: #ff4560;
+}
+
+#chart1,
+#chart2,
+#chart3 {
+    width: 200px;
+    height: 200px;
+}
+
+/* --------------------------- */
+.tasks-widget {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.inprogress-tasks,
+.notstarted-tasks,
+.complete-tasks {
+    background-color: var(--white);
+    padding: 20px;
+    flex-basis: 33.33%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+
+}
+
+.list-dashboard-tasks {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
+}
+
+.inprogress-tasks h5,
+.complete-tasks h5,
+.notstarted-tasks h5 {
+    position: relative;
+    padding-left: 20px;
+    display: inline-block;
+    font-size: 1.1em;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.inprogress-tasks h5 {
+    color: var(--light-blue);
+}
+
+.complete-tasks h5 {
+    color: var(--complete);
+}
+
+.inprogress-tasks h5::before,
+.complete-tasks h5::before,
+.notstarted-tasks h5::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+}
+
+.inprogress-tasks h5::before {
+    border: 3px solid var(--light-blue);
+}
+
+.complete-tasks h5::before {
+    border: 3px solid var(--complete);
+}
+
+.notstarted-task-item,
+.inprogress-task-item,
+.complete-task-item {
+    border-left: 4px solid #ddd8d8b4;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+    cursor: pointer;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        /* Nhẹ, lan rộng một chút */
+        0 10px 15px rgba(0, 0, 0, 0.05);
+    /* Lớn hơn, mờ hơn cho cảm giác nổi cao */
+    transition: all 0.3s ease;
+}
+
+.complete-task-item:hover {
+    background-color: var(--complete);
+    color: var(--white);
+}
+
+.inprogress-task-item:hover {
+    background-color: var(--light-blue);
+    color: var(--white);
+
+}
+
+.notstarted-task-item:hover {
+    background-color: var(--primary);
+    color: var(--white);
+
+}
+
+.complete-task-item:hover,
+.inprogress-task-item:hover,
+.notstarted-task-item:hover {
+    box-shadow:
+        0 8px 12px rgba(0, 0, 0, 0.15),
+        0 15px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    /* Nâng thẻ lên một chút */
+}
+
+.complete-task-item:hover .complete-task-desc,
+.complete-task-item:hover .complete-task-ago {
+    color: var(--white);
+}
+
+
+.inprogress-task-item:hover .inprogress-task-desc,
+.inprogress-task-item:hover .inprogress-task-ago {
+    color: var(--white);
+}
+
+.notstarted-task-item:hover .notstarted-task-desc,
+.notstarted-task-item:hover .notstarted-task-ago {
+    color: var(--white);
+}
+
+
+.notstarted-task-title,
+.inprogress-task-title,
+.complete-task-title {
+    font-size: 18px;
+}
+
+.notstarted-task-desc,
+.inprogress-task-desc,
+.complete-task-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    color: var(--color-text);
+    font-size: 15px;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.inprogress-task-ago {
+    color: var(--light-blue);
+}
+
+.complete-task-ago {
+    color: var(--complete);
+}
+
+.notstarted-task-ago {
+    color: var(--primary);
+}
+
+.notstarted-task-ago,
+.notstarted-task-created,
+.inprogress-task-ago,
+.inprogress-task-created,
+.complete-task-ago,
+.complete-task-created {
+    font-size: 14px;
+    margin: 3px 0;
+    font-weight: 500;
+    transition: 0.3s;
+}
