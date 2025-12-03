@@ -51,6 +51,7 @@
     font-size: 24px;
 }
 
+.btnInProgressTask,
 .btnDeleteTask,
 .btnEditTask,
 .btnAddTask,
@@ -69,6 +70,10 @@
 .btnEditTask:hover,
 .btnAddTask:hover {
     background-color: var(--light-primary);
+}
+
+.btnInProgressTask:hover {
+    opacity: 0.6;
 }
 
 .lists {
@@ -165,11 +170,6 @@
     background-color: #fefefe;
 }
 
-/* Style cho nội dung chi tiết */
-.detail-card {
-    /* Style cho card chi tiết task bên trong details-task */
-}
-
 .detail-card h3 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -195,6 +195,10 @@
 
 .btnCompleteTask:hover {
     background-color: var(--light-complete);
+}
+
+.btnInProgressTask {
+    background-color: var(--light-blue);
 }
 
 .priority span,
@@ -225,7 +229,7 @@
 
 /* 2. Hộp nội dung modal (Box trắng ở giữa) */
 .modal-content {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 30px;
     border-radius: 10px;
     width: 800px;
@@ -309,7 +313,7 @@
     font-weight: 500;
 }
 
-.list-checks li span {
+.list-checks li label {
     margin-left: 5px;
 }
 
@@ -330,4 +334,5 @@
     outline: none;
     border-radius: 10px;
     border: 1px solid #ccc;
+    padding: 10px;
 }

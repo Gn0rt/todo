@@ -60,8 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                     <div class="detail-actions">
                         <button class="btnEditTask"><i class="fa-solid fa-pen"></i></button>
+                        <button class="btnInProgressTask"><i class="fa-solid fa-spinner"></i></button>
                         <button class="btnCompleteTask"><i class="fa-solid fa-check"></i></button>
                         <button class="btnDeleteTask"><i class="fa-solid fa-trash-can"></i></button>
+
                     </div>
                 </div>
             `;
